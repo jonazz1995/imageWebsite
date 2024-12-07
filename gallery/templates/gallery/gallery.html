@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+</head>
+<body>
+    <h1>Gallery</h1>
+    <div class="gallery">
+        {% for image in images %}
+            <div class="image-item">
+                <h3>{{ image.title }}</h3>
+                <img src="{{ image.image.url }}" alt="{{ image.title }}" width="300">
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
